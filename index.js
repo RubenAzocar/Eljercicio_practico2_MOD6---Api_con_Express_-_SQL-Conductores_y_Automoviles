@@ -156,17 +156,6 @@ app.get('/conductoressinauto', (req, res) => {
             // Error 500: Internal Server Error
             return res.status(500).json({ error: 'Error al consultar conductores sin auto' });
         }
-
-        // Validación: Si no hay resultados, enviar mensaje personalizado
-        // result.rows.length === 0: Verifica si el array de resultados está vacío
-        if (result.rows.length === 0) {
-            // Código 404: Not Found - no se encontraron registros
-            // Template literal: Inserta la edad buscada en el mensaje
-            return res.status(404).json({
-                mensaje: `No existen conductores de ${edadNum} años en los registros`
-            });
-        }
-
         // Código 200: OK - responde con los datos filtrados
         res.status(200).json(result.rows);
     });
