@@ -1,0 +1,17 @@
+{
+  "name": "api-conductores-automoviles",
+  "version": "1.0.0",
+  "description": "API REST para gestionar conductores y automóviles con Express y PostgreSQL",
+  "license": "ISC",
+  "author": "Rubén Azócar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "pg": "^8.18.0"
+  }
+}

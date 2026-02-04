@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔧 Taller Mecánico "El Pistón Dorado" - Sistema de Gestión</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon">🔧</span>
+            <div>
+                <h1>El Pistón Dorado</h1>
+                <p class="subtitle">Sistema de Gestión de Vehículos</p>
+            </div>
+            <span class="logo-icon">⚙️</span>
+        </div>
+    </header>
+
+    <!-- ============================================
+         NAVEGACIÓN
+         ============================================ -->
+    <nav>
+        <button class="nav-btn primary" onclick="cargarConductores()">
+            👤 Conductores
+        </button>
+        <button class="nav-btn secondary" onclick="cargarAutomoviles()">
+            🚗 Automóviles
+        </button>
+        <button class="nav-btn accent" onclick="cargarSolitos()">
+            🔍 Sin Pareja
+        </button>
+    </nav>
+
+    <!-- ============================================
+         CONTENIDO PRINCIPAL
+         ============================================ -->
+    <main>
+        <!-- Sección de Búsqueda por Edad -->
+        <section class="search-section">
+            <h2>🎂 Buscar Conductores por Edad Mínima</h2>
+            <div class="search-group">
+                <div class="input-group">
+                    <label for="edadInput">Edad mínima (años)</label>
+                    <input type="number" id="edadInput" placeholder="Ej: 30" min="1" max="120">
+                </div>
+                <button class="search-btn" onclick="buscarPorEdad()">
+                    🔎 Buscar
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección de Búsqueda por Patente -->
+        <section class="search-section">
+            <h2>🚙 Buscar Automóvil por Patente</h2>
+            <div class="search-group">
+                <div class="input-group">
+                    <label for="patenteInput">Patente completa</label>
+                    <input type="text" id="patenteInput" placeholder="Ej: HXJH55" maxlength="10">
+                </div>
+                <button class="search-btn" onclick="buscarPorPatente()">
+                    🔎 Buscar Exacta
+                </button>
+            </div>
+            <div class="search-group" style="margin-top: 15px;">
+                <div class="input-group">
+                    <label for="inicioPatenteInput">Inicio de patente</label>
+                    <input type="text" id="inicioPatenteInput" placeholder="Ej: H" maxlength="5">
+                </div>
+                <button class="search-btn" onclick="buscarPorInicioPatente()">
+                    🔎 Buscar por Inicio
+                </button>
+            </div>
+        </section>
+
+        <!-- Área de Resultados -->
+        <section class="results-section">
+            <div class="results-header">
+                <h2>📋 <span id="resultsTitulo">Resultados</span></h2>
+                <span class="results-count" id="resultsCount">0 registros</span>
+            </div>
+            <div id="resultsContainer" class="results-grid">
+                <div class="empty-message">
+                    <div class="icon">🔧</div>
+                    <p>Selecciona una opción del menú o realiza una búsqueda</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <p>⚙️ Taller "El Pistón Dorado" — Desde <span class="year">1955</span> al servicio del automóvil ⚙️</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #4A6B7C;">
+            API REST con Express.js + PostgreSQL | Módulo 6 - Talento Digital
+        </p>
+    </footer>
+
+    <!-- JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
